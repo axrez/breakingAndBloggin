@@ -19,6 +19,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.18",
     "babel-eslint": "^9.0.0",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.12",
@@ -30,6 +31,7 @@
     "eslint-config-wesbos": "0.0.19",
     "eslint-plugin-html": "^5.0.3",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
@@ -45,9 +47,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn dev",
     "serve": "gatsby serve",
     "test": "jest --watchAll"
   },
