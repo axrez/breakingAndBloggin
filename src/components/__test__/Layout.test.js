@@ -16,6 +16,20 @@ describe('rendering <Layout />', () => {
   it('should render a <Nav />', () => {
     expect(wrapper.find('Nav')).toHaveLength(1)
   })
+  it('should pass the frontpage prop to <Nav />', () => {
+    expect(wrapper.find('Nav').props().frontpage).toBeDefined()
+  })
+  it('should pass frontpage=false by default', () => {
+    expect(wrapper.find('Nav').props().frontpage).toBeFalsy()
+  })
+  it('should pass frontpage=true by if its passed to layout', () => {
+    wrapper = shallow(
+      <Layout frontpage>
+        <p>child</p>
+      </Layout>
+    )
+    expect(wrapper.find('Nav').props().frontpage).toBeTruthy()
+  })
   it('should render a <Footer />', () => {
     expect(wrapper.find('Footer')).toHaveLength(1)
   })

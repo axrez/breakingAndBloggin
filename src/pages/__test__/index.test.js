@@ -12,6 +12,9 @@ describe('/ rendering', () => {
   it('should render a <Layout />', () => {
     expect(wrapper.find('Layout')).toHaveLength(1)
   })
+  it('should pass frontpage to <Layout />', () => {
+    expect(wrapper.find('Layout').props().frontpage).toBeTruthy()
+  })
   it('should render <Hero />', () => {
     expect(wrapper.find('Hero')).toHaveLength(1)
   })

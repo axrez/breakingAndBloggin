@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 
 const Index = () => (
-  <Layout>
+  <Layout frontpage>
     <Hero />
   </Layout>
 )

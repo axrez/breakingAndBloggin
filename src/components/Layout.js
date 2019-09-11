@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Nav from './nav/Nav'
 import Footer from './Footer'
+import './style/layout.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, frontpage }) => (
   <>
-    <Nav />
+    <Nav frontpage={frontpage} />
     {children}
     <Footer />
   </>
@@ -13,6 +14,11 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
+  frontpage: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  frontpage: false,
 }
 
 export default Layout
