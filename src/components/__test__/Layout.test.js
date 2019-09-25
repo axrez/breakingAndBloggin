@@ -36,4 +36,7 @@ describe('rendering <Layout />', () => {
   it('should render children', () => {
     expect(wrapper.find('p')).toHaveLength(1)
   })
+  it('should render a main wrapper around its children', () => {
+    expect(wrapper.find({ testid: 'main-wrapper' })).toHaveLength(1)
+  })
 })

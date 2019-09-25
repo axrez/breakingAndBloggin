@@ -3,11 +3,14 @@ import PropTypes from 'prop-types'
 import Nav from './nav/Nav'
 import Footer from './Footer'
 import './style/layout.css'
+import { Main } from './style'
 
 const Layout = ({ children, frontpage }) => (
   <>
     <Nav frontpage={frontpage} />
-    {children}
+    <Main testid="main-wrapper" frontpage={frontpage}>
+      {children}
+    </Main>
     <Footer />
   </>
 )

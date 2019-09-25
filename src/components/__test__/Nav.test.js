@@ -29,8 +29,11 @@ describe('rendering <Nav>', () => {
       wrapper.find({ testid: 'nav-wrapper', frontpage: true })
     ).toHaveLength(0)
   })
-  it('should render a <Title />', () => {
-    expect(wrapper.find({ testid: 'nav-title' })).toHaveLength(1)
+  it('should render a <MenuButton />', () => {
+    expect(wrapper.find({ testid: 'menu-button' })).toHaveLength(1)
+  })
+  it('should render a <Heading nav />', () => {
+    expect(wrapper.find({ testid: 'nav-heading', nav: true })).toHaveLength(1)
   })
   it('should render 2 <Link />', () => {
     expect(wrapper.find({ testid: 'nav-link' })).toHaveLength(2)
