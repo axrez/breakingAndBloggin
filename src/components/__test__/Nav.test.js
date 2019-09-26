@@ -38,4 +38,24 @@ describe('rendering <Nav>', () => {
   it('should render 2 <Link />', () => {
     expect(wrapper.find({ testid: 'nav-link' })).toHaveLength(2)
   })
+
+  it('should toggle the menu state when the menubutton is pressed', () => {
+    const btn = wrapper.find({ testid: 'menu-button' })
+    expect(wrapper.find({ testid: 'mobile-menu' })).toHaveLength(0)
+    btn.simulate('click')
+    expect(wrapper.find({ testid: 'mobile-menu' })).toHaveLength(1)
+    btn.simulate('click')
+    setTimeout(() => {
+      expect(wrapper.find({ testid: 'mobile-menu' })).toHaveLength(0)
+    }, 0)
+  })
+  it('should switch the menu button text when the button is pressed', () => {
+    expect(wrapper.find({ testid: 'menu-button' }).text()).toBe('Menu')
+    wrapper.find({ testid: 'menu-button' }).simulate('click')
+    expect(wrapper.find({ testid: 'menu-button' }).text()).toBe('Close')
+    wrapper.find({ testid: 'menu-button' }).simulate('click')
+    setTimeout(() => {
+      expect(wrapper.find({ testid: 'menu-button' }).text()).toBe('Menu')
+    }, 0)
+  })
 })

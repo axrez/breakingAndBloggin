@@ -10,7 +10,7 @@ export const Heading = styled.h1`
     props.nav &&
     css`
       font-size: 1.3rem;
-      margin: 0 1rem;
+      margin: 0 0.5rem;
       font-weight: 500;
     `}
 `
@@ -31,7 +31,7 @@ export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: #121335;
+  background: var(--secondary);
   color: var(--primary);
   ${props =>
     props.frontpage &&
@@ -58,6 +58,27 @@ export const NavLink = styled(Link)`
         font-size: 1.2rem;
       }
     `}
+  ${props =>
+    props.mobileMenuLink &&
+    css`
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      padding: 1rem;
+    `}
+`
+
+export const MenuWrapper = styled.nav`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 5rem 0 3rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary);
 `
 
 export const MenuButton = styled.button`
@@ -68,6 +89,7 @@ export const MenuButton = styled.button`
   font-size: 1.2rem;
   margin: 0 0.5rem;
   padding: 0.5rem;
+  z-index: 2;
 
   &:hover {
     background-color: #ffffff33;
