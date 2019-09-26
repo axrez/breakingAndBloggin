@@ -23,6 +23,9 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              featured_image
+            }
           }
         }
       }
@@ -35,6 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
         slug: node.fields.slug,
+        featured_image: node.frontmatter.featured_image,
       },
     })
   })

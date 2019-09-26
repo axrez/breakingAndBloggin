@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 const mobileBreakpoint = 600
 
 export const Heading = styled.h1`
-  font-size: 2rem;
-  width: 100%;
+  font-size: 1.5rem;
+  margin: 1rem;
   ${props =>
     props.nav &&
     css`
@@ -22,14 +22,15 @@ export const Subheading = styled.h2`
 `
 
 export const NavWrapper = styled.nav`
-  background: teal;
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
+  height: 4.5rem;
   width: 100%;
   background: var(--secondary);
   color: var(--primary);
@@ -59,7 +60,7 @@ export const NavLink = styled(Link)`
       }
     `}
   ${props =>
-    props.mobileMenuLink &&
+    props.mobilemenulink &&
     css`
       font-size: 1.5rem;
       margin: 1rem 0;
@@ -101,11 +102,15 @@ export const MenuButton = styled.button`
   }
 `
 
+export const BlogContent = styled.section`
+  margin: 1rem;
+`
+
 export const Main = styled.main`
   display: grid;
   ${props =>
     !props.frontpage &&
     css`
-      padding-top: 7rem;
+      margin-top: 4.5rem;
     `}
 `

@@ -3,16 +3,16 @@ import { MenuWrapper, NavLink } from '../style'
 
 const MobileMenu = () => (
   <MenuWrapper>
-    <NavLink mobileMenuLink to="/">
+    <NavLink mobilemenulink="true" to="/">
       Home
     </NavLink>
-    <NavLink mobileMenuLink to="/about">
+    <NavLink mobilemenulink="true" to="/about">
       About
     </NavLink>
-    <NavLink mobileMenuLink to="/blog">
+    <NavLink mobilemenulink="true" to="/blog">
       Blog
     </NavLink>
-    <NavLink mobileMenuLink to="/contact">
+    <NavLink mobilemenulink="true" to="/contact">
       Contact
     </NavLink>
   </MenuWrapper>
