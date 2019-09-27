@@ -5,7 +5,10 @@ import styled from 'styled-components'
 const Image = props => <Img {...props} />
 
 const ImageContainer = styled(Image)`
-  max-height: 20vh;
+  width: 100vw;
+  justify-self: center;
+  max-height: 60vw;
+  max-width: 960px;
 `
 
 export default ImageContainer

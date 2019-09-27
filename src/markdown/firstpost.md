@@ -1,7 +1,7 @@
 ---
 title: My first post
 date: 23/9-2019
-featured_image: gatsby-astronaut.png
+featured_image: bg3.png
 ---
 
 # This is my first blog post

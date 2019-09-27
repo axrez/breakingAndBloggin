@@ -103,11 +103,12 @@ export const MenuButton = styled.button`
 `
 
 export const BlogContent = styled.section`
-  margin: 1rem;
+  margin: 1.5rem;
 `
 
 export const Main = styled.main`
   display: grid;
+  align-items: center;
   ${props =>
     !props.frontpage &&
     css`
