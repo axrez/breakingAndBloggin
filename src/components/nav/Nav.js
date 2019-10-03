@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import MobileMenu from './MobileMenu'
 import { Heading, NavWrapper, NavLink, MenuButton } from '../style'
 
-const Nav = ({ frontpage }) => {
+const Nav = ({ frontpage, top = false }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const handleMenuToggle = () => {
@@ -11,7 +11,7 @@ const Nav = ({ frontpage }) => {
   }
 
   return (
-    <NavWrapper testid="nav-wrapper" frontpage={frontpage}>
+    <NavWrapper testid="nav-wrapper" frontpage={frontpage} top={top}>
       <Heading testid="nav-heading" nav>
         <NavLink to="/">Emil Østergaard</NavLink>
       </Heading>
@@ -31,6 +31,7 @@ const Nav = ({ frontpage }) => {
 
 Nav.propTypes = {
   frontpage: PropTypes.bool,
+  top: PropTypes.bool,
 }
 
 export default Nav

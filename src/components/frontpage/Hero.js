@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Subheading } from './style'
+import { Heading, Subheading } from '../style'
 
 const Hero = () => (
   <>
@@ -9,14 +9,13 @@ const Hero = () => (
       <Subheading testid="hero-subheading">
         I'm a webdeveloper based out of Zealand, Denmark.
       </Subheading>
-      <Wedge>></Wedge>
     </HeroHeader>
   </>
 )
 
 const HeroHeader = styled.header`
-  background-color: #121335;
-  padding: 13rem 1rem 1rem;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+  padding: 20vh 1rem 20vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -25,16 +24,15 @@ const HeroHeader = styled.header`
 
   ${Heading} {
     max-width: 28rem;
+    font-size: 2.5rem;
+    letter-spacing: -0.12rem;
+    font-weight: 300;
+    margin-left: 0;
   }
   ${Subheading} {
     max-width: 28rem;
+    font-weight: 300;
   }
-`
-
-const Wedge = styled.p`
-  font-size: 1.5rem;
-  margin-top: 15vh;
-  transform: rotate(90deg);
 `
 
 export default Hero

@@ -22,7 +22,6 @@ export const Subheading = styled.h2`
 `
 
 export const NavWrapper = styled.nav`
-  padding: 1rem 0;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -30,18 +29,24 @@ export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
   z-index: 2;
-  height: 4.5rem;
   width: 100%;
-  background: var(--secondary);
-  color: var(--primary);
+  background: #fff;
+  color: var(--secondary);
+  transition: box-shadow 200ms ease;
+
   ${props =>
     props.frontpage &&
     css`
       background: transparent;
     `};
+  ${props =>
+    !props.top &&
+    css`
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.19),
+        0px 4px 6px rgba(0, 0, 0, 0.19);
+    `}
   @media screen and (min-width: ${mobileBreakpoint}px) {
     grid-template-columns: 1fr repeat(2, auto);
-    padding: 2rem 0;
   }
 `
 
@@ -83,17 +88,17 @@ export const MenuWrapper = styled.nav`
 `
 
 export const MenuButton = styled.button`
-  background: none;
-  background-color: #ffffff00;
+  background-color: var(--primary);
   border: none;
-  color: inherit;
+  color: white;
   font-size: 1.2rem;
-  margin: 0 0.5rem;
-  padding: 0.5rem;
+  height: 100%;
+  padding: 1rem 1.2rem;
+  margin-right: 1rem;
   z-index: 2;
 
   &:hover {
-    background-color: #ffffff33;
+    background-color: var(--primary-lighter);
     cursor: pointer;
   }
 
@@ -109,9 +114,15 @@ export const BlogContent = styled.section`
 export const Main = styled.main`
   display: grid;
   align-items: center;
+  margin: 1rem;
   ${props =>
     !props.frontpage &&
     css`
-      margin-top: 4.5rem;
+      margin-top: 3.3rem;
     `}
+`
+
+export const Aside = styled.aside`
+  display: flex;
+  flex-direction: column;
 `

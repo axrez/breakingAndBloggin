@@ -2,7 +2,7 @@ import React from 'react'
 import '../../../enzyme.config'
 import { shallow } from 'enzyme'
 
-import Hero from '../Hero'
+import Hero from '../frontpage/Hero'
 
 describe('rendering <Hero />', () => {
   let wrapper

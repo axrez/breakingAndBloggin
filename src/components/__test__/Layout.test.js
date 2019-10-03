@@ -39,4 +39,7 @@ describe('rendering <Layout />', () => {
   it('should render a main wrapper around its children', () => {
     expect(wrapper.find({ testid: 'main-wrapper' })).toHaveLength(1)
   })
+  it('should pass the true to the top prop on the <Nav /> when the pages y-offset is 0', () => {
+    expect(wrapper.find('Nav').props().top).toBeTruthy()
+  })
 })

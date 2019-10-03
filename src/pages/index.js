@@ -1,10 +1,14 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import Layout from '../components/Layout'
+import Hero from '../components/frontpage/Hero'
+import About from '../components/frontpage/About'
 
 const Index = () => (
-  <Layout frontpage>
-    <Hero />
+  <Layout>
+    <>
+      <Hero />
+      <About />
+    </>
   </Layout>
 )
 

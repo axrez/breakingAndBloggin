@@ -3,8 +3,11 @@
 }
 
 html {
-  --primary: rgb(240, 240, 240);
-  --secondary: #121335;
+  --primary: #77c9d4;
+  --primary-lighter: #65b7c2;
+  --secondary: #015249;
+  --accent: #57BC90;
+  --flat: #A5A5AF;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -18,4 +21,10 @@ body {
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#gatsby-focus-wrapper, #___gatsby {
+  height: 100%;
 }
