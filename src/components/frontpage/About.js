@@ -1,11 +1,18 @@
 import React from 'react'
-import { Aside, Heading } from '../style'
+import { Aside, AsideWrapper, Heading } from '../style'
+import ReactLogo from '../../svg/reactLogo'
+import NextLogo from '../../svg/nextJsLogo'
+import GatsbyLogo from '../../svg/gatsbyLogo'
 
 const AboutSection = () => (
-  <>
+  <AsideWrapper>
     <Heading>Dette er about</Heading>
-    <Aside>lalala</Aside>
-  </>
+    <Aside>
+      <ReactLogo />
+      <GatsbyLogo />
+      <NextLogo />
+    </Aside>
+  </AsideWrapper>
 )
 
 export default AboutSection

@@ -125,4 +125,19 @@ export const Main = styled.main`
 export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: var(--shadow);
+  margin-top: -1.5rem;
+  & svg {
+    width: 20vw;
+    height: 20vw;
+    margin: 1rem;
+  }
+`
+
+export const AsideWrapper = styled.div`
+  display: grid;
+  margin-right: 1rem;
+  grid-template-columns: 1fr auto;
 `
