@@ -42,8 +42,9 @@ export const NavWrapper = styled.nav`
   ${props =>
     !props.top &&
     css`
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.19),
-        0px 4px 6px rgba(0, 0, 0, 0.19);
+      box-shadow: var(--shadow);
+      /* 0px 2px 2px rgba(0, 0, 0, 0.19),
+        0px 4px 6px rgba(0, 0, 0, 0.19); */
     `}
   @media screen and (min-width: ${mobileBreakpoint}px) {
     grid-template-columns: 1fr repeat(2, auto);
@@ -125,19 +126,37 @@ export const Main = styled.main`
 export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 1rem;
+  margin-right: -0.5rem;
   background: #fff;
   box-shadow: var(--shadow);
   margin-top: -1.5rem;
   & svg {
-    width: 20vw;
-    height: 20vw;
+    width: 17vw;
+    height: 17vw;
     margin: 1rem;
   }
 `
 
 export const AsideWrapper = styled.div`
   display: grid;
+  grid-gap: 0.3rem;
   margin-right: 1rem;
   grid-template-columns: 1fr auto;
+`
+
+export const ButtonLink = styled(Link)`
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin: 1rem 0;
+  ${props =>
+    props.primary &&
+    css`
+      background: var(--gradient);
+      color: #fff;
+    `}
 `
