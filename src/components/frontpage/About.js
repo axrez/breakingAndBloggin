@@ -12,7 +12,7 @@ const AboutSection = () => (
       <AboutContent>
         Hi, I’m a frontend dev based out of Zealand, Denmark. I love
         technologies such as JavaScript, React, Gatsby, next.js and node.js
-        <ButtonLink primary to="/about">
+        <ButtonLink primary="true" to="/about">
           Read More
           <NextNavArrow />
         </ButtonLink>

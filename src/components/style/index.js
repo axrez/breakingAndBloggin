@@ -6,13 +6,28 @@ const mobileBreakpoint = 600
 export const Heading = styled.h1`
   font-size: 1.5rem;
   margin: 1rem;
+  color: #fff;
   ${props =>
     props.nav &&
     css`
       font-size: 1.3rem;
+      color: var(--secondary);
       margin: 0 0.5rem;
       font-weight: 500;
     `}
+  ${props =>
+    props.overlay &&
+    css`
+      position: relative;
+      top: 0.9rem;
+      font-weight: 500;
+      color: var(--secondary);
+      background: #fff;
+      box-shadow: var(--shadow);
+      padding: 0.5rem 1rem;
+      margin: 2.5rem 0 0 1rem;
+      width: fit-content;
+    `};
 `
 
 export const Subheading = styled.h2`
@@ -112,6 +127,12 @@ export const BlogContent = styled.section`
   margin: 1.5rem;
 `
 
+export const DateLine = styled.h6`
+  margin: 0;
+  font-weight: 400;
+  color: #676767;
+`
+
 export const Main = styled.main`
   display: grid;
   align-items: center;
@@ -149,14 +170,33 @@ export const AsideWrapper = styled.div`
 export const ButtonLink = styled(Link)`
   box-shadow: var(--shadow);
   padding: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   justify-content: space-between;
   text-decoration: none;
   margin: 1rem 0;
+  font-size: 1.3rem;
   ${props =>
     props.primary &&
     css`
       background: var(--gradient);
       color: #fff;
+      & svg {
+        fill: #fff;
+      }
     `}
+  ${props =>
+    props.secondary &&
+    css`
+      background: #fff;
+      color: var(--secondary);
+      & svg {
+        fill: var(--secondary);
+      }
+    `}
+`
+
+export const ButtonLinkList = styled.div`
+  background: var(--gradient);
+  padding: 1rem 1rem 0.85rem;
 `
