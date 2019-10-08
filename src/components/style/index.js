@@ -173,6 +173,7 @@ export const ButtonLink = styled(Link)`
   display: grid;
   grid-template-columns: 1fr auto;
   justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   margin: 1rem 0;
   font-size: 1.3rem;
