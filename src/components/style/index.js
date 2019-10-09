@@ -86,6 +86,11 @@ export const NavLink = styled(Link)`
       font-size: 1.5rem;
       margin: 1rem 0;
       padding: 1rem;
+      color: #fff;
+      border-radius: 5px;
+      & : hover {
+        background-color: #0002;
+      }
     `}
 `
 
@@ -93,14 +98,16 @@ export const MenuWrapper = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: calc(100vw - 2rem);
+  margin: 0 1rem;
   padding: 5rem 0 3rem;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--secondary);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+  box-shadow: var(--shadow);
 `
 
 export const MenuButton = styled.button`
