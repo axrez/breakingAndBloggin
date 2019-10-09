@@ -13,7 +13,9 @@ const RecentPosts = () => {
           <ButtonLink secondary="true" key={index} to={node.fields.slug}>
             {node.frontmatter.title}
             <NextNavArrow />
-            <DateLine>{node.frontmatter.date}</DateLine>
+            <DateLine>{`${new Date(
+              node.frontmatter.date
+            ).toDateString()}`}</DateLine>
           </ButtonLink>
         ))}
       </ButtonLinkList>

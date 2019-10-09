@@ -1,6 +1,6 @@
 ---
 title: My first post
-date: 23/9-2019
+date: 2019-09-23
 featured_image: bg3.png
 ---
 
