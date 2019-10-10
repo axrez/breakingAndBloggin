@@ -5,7 +5,9 @@ import { Heading, Subheading } from '../style'
 const Hero = () => (
   <>
     <HeroHeader>
-      <Heading testid="hero-header">Hi, I'm Emil Østergaard</Heading>
+      <Heading hero="true" testid="hero-header">
+        Hi, I'm Emil Østergaard
+      </Heading>
       <Subheading testid="hero-subheading">
         I'm a webdeveloper based out of Zealand, Denmark.
       </Subheading>

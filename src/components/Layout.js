@@ -20,7 +20,12 @@ const Layout = ({ children, frontpage }) => {
   return (
     <div
       onScroll={onScroll}
-      style={{ overflow: 'scroll', width: '100%', height: '100%' }}
+      style={{
+        overflowY: 'scroll',
+        overflowX: 'hidden',
+        width: '100%',
+        height: '100%',
+      }}
     >
       <Nav frontpage={frontpage} top={top} />
       <Main testid="main-wrapper" frontpage={frontpage}>

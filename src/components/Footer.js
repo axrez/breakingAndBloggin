@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Footer = () => (
-  <FooterText>{`Emil Østergaard © ${new Date().getFullYear()} Hosted wiht ♥ by netlify`}</FooterText>
+  <FooterText>{`Emil Østergaard © ${new Date().getFullYear()} Hosted with ♥ by netlify`}</FooterText>
 )
 
 const FooterText = styled.p`

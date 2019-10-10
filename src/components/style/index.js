@@ -6,7 +6,12 @@ const mobileBreakpoint = 600
 export const Heading = styled.h1`
   font-size: 1.5rem;
   margin: 1rem;
-  color: #fff;
+  color: var(--secondary);
+  ${props =>
+    props.hero &&
+    css`
+      color: #fff;
+    `}
   ${props =>
     props.nav &&
     css`
@@ -40,7 +45,7 @@ export const NavWrapper = styled.nav`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 2;
@@ -131,7 +136,7 @@ export const MenuButton = styled.button`
 `
 
 export const BlogContent = styled.section`
-  margin: 1.5rem;
+  margin: 0.5rem;
 `
 
 export const DateLine = styled.h6`
@@ -143,12 +148,7 @@ export const DateLine = styled.h6`
 export const Main = styled.main`
   display: grid;
   align-items: center;
-  margin: 1rem;
-  ${props =>
-    !props.frontpage &&
-    css`
-      margin-top: 3.3rem;
-    `}
+  margin: 0 1rem 1rem 1rem;
 `
 
 export const Aside = styled.aside`
