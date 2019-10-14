@@ -111,7 +111,7 @@ export const MenuWrapper = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+  background: var(--vertical-gradient);
   box-shadow: var(--shadow);
 `
 

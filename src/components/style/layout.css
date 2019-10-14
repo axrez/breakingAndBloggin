@@ -9,6 +9,7 @@ html {
   --accent: #57BC90;
   --flat: #A5A5AF;
   --gradient: linear-gradient(262.63deg, var(--primary) 0%, var(--accent) 98.24%);
+  --vertical-gradient:  linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
   --shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
