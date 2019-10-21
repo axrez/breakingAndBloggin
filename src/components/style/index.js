@@ -6,6 +6,7 @@ const mobileBreakpoint = 600
 export const Heading = styled.h1`
   font-size: 1.5rem;
   margin: 1rem;
+  font-weight: 500;
   color: var(--secondary);
   ${props =>
     props.hero &&
@@ -18,14 +19,12 @@ export const Heading = styled.h1`
       font-size: 1.3rem;
       color: var(--secondary);
       margin: 0 0.5rem;
-      font-weight: 500;
     `}
   ${props =>
     props.overlay &&
     css`
       position: relative;
       top: 0.9rem;
-      font-weight: 500;
       color: var(--secondary);
       background: #fff;
       box-shadow: var(--shadow);
@@ -33,6 +32,16 @@ export const Heading = styled.h1`
       margin: 2.5rem 0 0 1rem;
       width: fit-content;
     `};
+  ${props =>
+    props.inlineOverlay &&
+    css`
+      margin-top: 0;
+    `}
+  ${props =>
+    props.inline &&
+    css`
+      margin: 2.5rem 0.5rem 0 0.5rem;
+    `}
 `
 
 export const Subheading = styled.h2`
@@ -137,6 +146,12 @@ export const MenuButton = styled.button`
 
 export const BlogContent = styled.section`
   margin: 0.5rem;
+
+  p {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    margin: 0;
+  }
 `
 
 export const DateLine = styled.h6`

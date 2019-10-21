@@ -9,8 +9,12 @@ const RecentPosts = () => {
     <>
       <Heading overlay="true">Latest Posts</Heading>
       <ButtonLinkList>
-        {posts.map(({ node }, index) => (
-          <ButtonLink secondary="true" key={index} to={node.fields.slug}>
+        {posts.map(({ node }) => (
+          <ButtonLink
+            secondary="true"
+            key={node.fields.slug}
+            to={`/posts${node.fields.slug}`}
+          >
             {node.frontmatter.title}
             <NextNavArrow />
             <DateLine>{`${new Date(
