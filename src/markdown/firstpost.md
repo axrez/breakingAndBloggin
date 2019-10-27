@@ -13,6 +13,6 @@ Ipsam laborum dolorem repellat possimus accusamus exercitationem tempora, vitae 
 
 Maxime dolore distinctio atque error harum perspiciatis officia, consequuntur reprehenderit, laboriosam eveniet tempore! Non nobis repellat architecto vero reiciendis, soluta enim debitis labore eius qui quo harum ullam, ipsum sint aliquam, dicta aperiam tempore? Minima laboriosam, optio magni repellat omnis dolores libero temporibus excepturi magnam, ratione architecto totam, impedit commodi fuga mollitia recusandae saepe?
 
-```javascript
+```js{1}
 const test = 'gang'
 ```

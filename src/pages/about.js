@@ -14,6 +14,7 @@ const About = () => (
         running, programming, climbing and playing Magic the Gathering (an
         awesome trading card game).
       </p>
+      <br />
       <p>
         My interest in programming was sparked during my time in high school and
         especially in web-development. React has occupied my attention since in

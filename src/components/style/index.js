@@ -146,12 +146,17 @@ export const MenuButton = styled.button`
 
 export const BlogContent = styled.section`
   margin: 0.5rem;
+  font-size: 1.05rem;
 
-  p {
-    line-height: 1.5rem;
-    font-size: 1.1rem;
-    margin: 0;
-  }
+  ${props =>
+    props.blogFront &&
+    css`
+      p {
+        line-height: 1.5rem;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+    `}
 `
 
 export const DateLine = styled.h6`

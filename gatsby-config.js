@@ -15,7 +15,26 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-code-titles`,
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              colorTheme: 'Material Theme',
+              extensions: [
+                {
+                  identifier: `Equinusocio.vsc-material-theme`,
+                  version: `30.0.0`,
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,6 +53,7 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+
     `gatsby-plugin-styled-components`,
   ],
 }
