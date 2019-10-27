@@ -1,36 +1,43 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { Heading, BlogContent } from '../components/style'
+import Hero from '../components/about/Hero'
+import {
+  Heading,
+  ButtonLinkList,
+  Content,
+  BoxListItem,
+} from '../components/style'
 
 const About = () => (
   <Layout>
-    <Heading>Hi, I'm Emil</Heading>
-    <BlogContent>
-      <p>
-        My name is Emil. I'm 20 years old and live in the town of Slagelse. I've
-        finished high school this year (the summer of 2019) and will be taking a
-        year or two off before university. I would describe myself as engaged,
-        curious, responsible, and with a drive to learn. I spend my free time
-        running, programming, climbing and playing Magic the Gathering (an
-        awesome trading card game).
-      </p>
-      <br />
-      <p>
-        My interest in programming was sparked during my time in high school and
-        especially in web-development. React has occupied my attention since in
-        the forms of create-react-app, Gatsby and next.js. I've also dabbled in
-        the realm of node.js and NoSQL databases such as mongoDB. Lastly, I’ve
-        done some IoT stuff with ESP8266 and ESP32 chips in different school
-        projects.
-      </p>
-      <p>Curently interested in:</p>
-      <ul>
-        <li>Gatsby</li>
-        <li>Next.js</li>
-        <li>React Spring</li>
-        <li>Svelte</li>
-      </ul>
-    </BlogContent>
+    <Hero />
+    <Content about="true">
+      I’m a front-end developer based out of Zealand, Denmark. I love learning,
+      programming and being physically active. I’m currently looking into the
+      following:
+    </Content>
+    <Heading overlay="true">On my mind</Heading>
+    <ButtonLinkList>
+      <BoxListItem secondary="true">Animations with react spring</BoxListItem>
+      <BoxListItem secondary="true">Typescript</BoxListItem>
+      <BoxListItem secondary="true">Gatsby, Gatsby, Gatsby</BoxListItem>
+    </ButtonLinkList>
+    <Content>
+      Here is the longer version: <br /> I got my start in programming with c++
+      and arduinos during the first year of high school. After about a year of
+      c++ and microcontrollers I fell into the frontend world and I’ve been in
+      love with React ever since.
+    </Content>
+
+    <Content about="true">
+      I’ve since explored node.js, mongoDB and a lot of front-end, like node.js
+      and Gatsby.
+    </Content>
+
+    <Content>
+      When I’m not programming I like playing Magic the Gathering alongside
+      running and bouldering. I also enjoy a good gin and tonic on fridays.
+    </Content>
   </Layout>
 )
 

@@ -1,43 +1,41 @@
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Nav from './nav/Nav'
 import Footer from './Footer'
 import './style/layout.css'
 import { Main } from './style'
+import { useScrollPosition } from '../utils/useScrollPosition'
 
 const Layout = ({ children, frontpage }) => {
   const [top, setTop] = useState(true)
-  const onScroll = useCallback(
-    e => {
-      if (e.target.scrollTop !== 0 && top) {
-        setTop(false)
-      } else if (e.target.scrollTop === 0) {
+  useScrollPosition(
+    ({ currPos }) => {
+      if (currPos.y === 0 && !top) {
         setTop(true)
       }
+      if (currPos.y !== 0 && top) {
+        setTop(false)
+      }
     },
-    [top]
+    [top],
+    null,
+    false,
+    50
   )
+
   return (
-    <div
-      onScroll={onScroll}
-      style={{
-        overflowY: 'scroll',
-        overflowX: 'hidden',
-        width: '100%',
-        height: '100%',
-      }}
-    >
+    <>
       <Nav frontpage={frontpage} top={top} />
       <Main testid="main-wrapper" frontpage={frontpage}>
         {children}
       </Main>
       <Footer />
-    </div>
+    </>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
   frontpage: PropTypes.bool,
 }
 

@@ -159,6 +159,19 @@ export const BlogContent = styled.section`
     `}
 `
 
+export const Content = styled.p`
+  font-size: 1.2rem;
+  overflow-wrap: anywhere;
+  color: var(--secondary);
+  margin: 1.7rem 0.8rem;
+
+  ${props =>
+    props.about &&
+    css`
+      margin: 0.3rem 0.8rem 0rem;
+    `}
+`
+
 export const DateLine = styled.h6`
   margin: 0;
   font-weight: 400;
@@ -204,6 +217,37 @@ export const ButtonLink = styled(Link)`
   text-decoration: none;
   margin: 1rem 0;
   font-size: 1.3rem;
+  ${props =>
+    props.primary &&
+    css`
+      background: var(--gradient);
+      color: #fff;
+      & svg {
+        fill: #fff;
+      }
+    `}
+  ${props =>
+    props.secondary &&
+    css`
+      background: #fff;
+      color: var(--secondary);
+      & svg {
+        fill: var(--secondary);
+      }
+    `}
+`
+
+export const BoxListItem = styled.p`
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  list-style: none;
   ${props =>
     props.primary &&
     css`
