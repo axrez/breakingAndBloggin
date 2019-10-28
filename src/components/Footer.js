@@ -7,7 +7,6 @@ const Footer = () => (
 
 const FooterText = styled.p`
   margin: 0;
-  width: 100vw;
   font-size: 0.85rem;
   text-align: center;
   color: #676767;

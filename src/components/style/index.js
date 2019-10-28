@@ -146,6 +146,7 @@ export const MenuButton = styled.button`
 
 export const BlogContent = styled.section`
   margin: 0.5rem;
+  margin-top: -0.2rem;
   font-size: 1.05rem;
 
   ${props =>
@@ -157,6 +158,13 @@ export const BlogContent = styled.section`
         margin: 0;
       }
     `}
+
+  h2 {
+    color: var(--secondary);
+  }
+  h3 {
+    color: var(--secondary);
+  }
 `
 
 export const Content = styled.p`
