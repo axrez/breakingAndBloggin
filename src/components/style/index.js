@@ -80,9 +80,9 @@ export const NavWrapper = styled.nav`
     `}
   @media screen and (min-width: ${mobileBreakpoint}px) {
     grid-template-columns: 
-      calc((100vw - 960px) / 2) 
+      calc((100% - 960px) / 2) 
       1fr repeat(3, auto) 
-      calc((100vw - 960px) / 2);
+      calc((100% - 960px) / 2);
   }
 `
 
