@@ -30,7 +30,7 @@ const About = () => (
     </Content>
 
     <Content about="true">
-      I’ve since explored node.js, mongoDB and a lot of front-end, like node.js
+      I’ve since explored node.js, mongoDB and a lot of front-end, like next.js
       and Gatsby.
     </Content>
 

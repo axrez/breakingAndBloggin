@@ -39,5 +39,6 @@ const ContactWrapper = styled.div`
 
   & svg {
     width: 20vw;
+    max-width: 8rem;
   }
 `

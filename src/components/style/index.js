@@ -19,6 +19,9 @@ export const Heading = styled.h1`
       font-size: 1.3rem;
       color: var(--secondary);
       margin: 0 0.5rem;
+      @media screen and (min-width: 600px) {
+        grid-column: 2/3;
+      }
     `}
   ${props =>
     props.overlay &&
@@ -40,7 +43,7 @@ export const Heading = styled.h1`
   ${props =>
     props.inline &&
     css`
-      margin: 2.5rem 0.5rem 0 0.5rem;
+      margin: 2.5rem 0.5rem 0.7rem 0.5rem;
     `}
 `
 
@@ -76,7 +79,10 @@ export const NavWrapper = styled.nav`
         0px 4px 6px rgba(0, 0, 0, 0.19); */
     `}
   @media screen and (min-width: ${mobileBreakpoint}px) {
-    grid-template-columns: 1fr repeat(2, auto);
+    grid-template-columns: 
+      calc((100vw - 960px) / 2) 
+      1fr repeat(3, auto) 
+      calc((100vw - 960px) / 2);
   }
 `
 
@@ -92,6 +98,15 @@ export const NavLink = styled(Link)`
       @media screen and (max-width: ${mobileBreakpoint - 1}px) {
         display: none;
         font-size: 1.2rem;
+      }
+      ${props.cta &&
+        css`
+          color: #fff;
+          background: var(--primary);
+          margin-right: 1rem;
+        `}
+      @media screen and (min-width: 960px) {
+        margin-right: 0;
       }
     `}
   ${props =>
@@ -149,6 +164,11 @@ export const BlogContent = styled.section`
   margin-top: -0.2rem;
   font-size: 1.05rem;
 
+  p {
+    color: #222;
+    line-height: 1.5rem;
+  }
+
   ${props =>
     props.blogFront &&
     css`
@@ -178,6 +198,12 @@ export const Content = styled.p`
     css`
       margin: 0.3rem 0.8rem 0rem;
     `}
+
+  @media screen and (min-width: 550px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const DateLine = styled.h6`
@@ -190,6 +216,10 @@ export const Main = styled.main`
   display: grid;
   align-items: center;
   margin: 0 1rem 1rem 1rem;
+  max-width: 960px;
+  @media screen and (min-width: 960px) {
+    margin: 0 auto 1rem auto;
+  }
 `
 
 export const Aside = styled.aside`
@@ -204,7 +234,15 @@ export const Aside = styled.aside`
   & svg {
     width: 17vw;
     height: 17vw;
+    max-width: 5rem;
+    max-height: 5rem;
     margin: 1rem;
+    filter: grayscale(1) contrast(0.5);
+  }
+  @media screen and (min-width: 550px) {
+    flex-direction: row;
+    grid-row: 1/2;
+    margin-right: 0;
   }
 `
 
@@ -213,6 +251,17 @@ export const AsideWrapper = styled.div`
   grid-gap: 0.3rem;
   margin-right: 1rem;
   grid-template-columns: 1fr auto;
+  max-width: 600px;
+
+  @media screen and (min-width: 550px) {
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 630px) {
+    margin: 0 auto;
+  }
 `
 
 export const ButtonLink = styled(Link)`
@@ -230,9 +279,23 @@ export const ButtonLink = styled(Link)`
     css`
       background: var(--gradient);
       color: #fff;
+      max-width: 20rem;
       & svg {
         fill: #fff;
       }
+      ${props.aboutsection &&
+        css`
+          @media screen and (min-width: 550px) {
+            width: 50%;
+            margin-top: 2rem;
+          }
+        `}
+      ${props.contactsection &&
+        css`
+          @media screen and (min-width: 550px) {
+            width: 15rem;
+          }
+        `}
     `}
   ${props =>
     props.secondary &&

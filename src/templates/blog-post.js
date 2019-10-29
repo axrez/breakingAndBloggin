@@ -12,7 +12,7 @@ const BlogPost = ({ data }) => {
     <Layout>
       <>
         <ImageContainer fluid={data.featuredImage.childImageSharp.fluid} />
-        <Heading>{post.frontmatter.title}</Heading>
+        <Heading inline="true">{post.frontmatter.title}</Heading>
         <BlogContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </>
     </Layout>

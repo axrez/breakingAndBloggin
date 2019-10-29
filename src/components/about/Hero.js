@@ -53,7 +53,7 @@ const HeroHeader = styled.header`
 
   ${ImageContainer} {
     width: 55%;
-    max-width: 500px;
+    max-width: 300px;
     border-radius: 50%;
     /* margin-top: -12vh; */
     box-shadow: var(--shadow);

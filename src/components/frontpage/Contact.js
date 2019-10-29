@@ -6,7 +6,7 @@ import NextNavArrow from '../../svg/nextNavArrow'
 const ContactSection = () => (
   <ContactSectionWrapper>
     <Heading overlay="true">Let's talk</Heading>
-    <ButtonLink to="/contact" primary="true">
+    <ButtonLink to="/contact" primary="true" contactsection="true">
       Get in touch
       <NextNavArrow />
     </ButtonLink>
@@ -22,7 +22,9 @@ const ContactSectionWrapper = styled.div`
     top: 1.5rem;
   }
   margin-top: 2rem;
+  margin-left: auto;
   margin-bottom: 4rem;
+  margin-right: auto;
 `
 
 export default ContactSection
