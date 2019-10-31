@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
 import Hero from '../components/about/Hero'
 import {
   Heading,
@@ -10,6 +11,10 @@ import {
 
 const About = () => (
   <Layout>
+    <SEO
+      meta="Want to learn more about me? This is the place to do it."
+      title="Emil Østergaard"
+    />
     <Hero />
     <Content about="true">
       I’m a front-end developer based out of Zealand, Denmark. I love learning,

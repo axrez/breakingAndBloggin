@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
 import { Heading } from '../components/style'
 import EmailLogo from '../svg/emailLogo'
 import GithubLogo from '../svg/githubLogo'
@@ -8,6 +9,10 @@ import FacebookIcon from '../svg/facebookLogo'
 
 const Contact = () => (
   <Layout>
+    <SEO
+      meta="Want to talk? Reach out to me and let's chat about it!"
+      title="Emil Østergaard"
+    />
     <ContactWrapper>
       <Heading hero="true">Get in touch</Heading>
       <a href="mailto:emoestergaard@gmail.com">
