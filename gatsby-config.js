@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Emil Østergaard`,
-    description: `My personal website and blog where i write about random tech-stuff (mostly js) I find interesting`,
+    description: `My personal website and blog where I write about random tech-stuff (mostly js) I find interesting`,
     author: `@axrez`,
   },
   plugins: [
@@ -48,8 +48,8 @@ module.exports = {
         name: `Emil-Østergaard`,
         short_name: `eo`,
         start_url: `/`,
-        background_color: `#FFF`,
-        theme_color: `#FFF`,
+        background_color: `#77c9d4`,
+        theme_color: `#77c9d4`,
         display: `minimal-ui`,
       },
     },

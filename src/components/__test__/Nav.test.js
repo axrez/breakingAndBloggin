@@ -35,8 +35,8 @@ describe('rendering <Nav>', () => {
   it('should render a <Heading nav />', () => {
     expect(wrapper.find({ testid: 'nav-heading', nav: true })).toHaveLength(1)
   })
-  it('should render 2 <Link />', () => {
-    expect(wrapper.find({ testid: 'nav-link' })).toHaveLength(2)
+  it('should render 3 <Link />', () => {
+    expect(wrapper.find({ testid: 'nav-link' })).toHaveLength(3)
   })
 
   it('should toggle the menu state when the menubutton is pressed', () => {
