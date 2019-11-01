@@ -20,7 +20,7 @@ const Blog = ({ data }) => {
     <Layout>
       <SEO
         meta="Welcome to my blog where I write about all the things that interest me, especially javascript."
-        title="Emil Østergaard"
+        title="Blog"
       />
       <Heading inline="true">Welcome to my blog</Heading>
       <BlogContent blogFront="true">

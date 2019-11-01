@@ -163,6 +163,16 @@ export const BlogContent = styled.section`
   margin: 0.5rem;
   margin-top: -0.2rem;
   font-size: 1.05rem;
+  width: 100%;
+
+  pre {
+    max-width: calc(100vw - 3rem);
+    overflow-x: scroll;
+    @media screen and (min-width: 960px) {
+      max-width: unset;
+      overflow-x: unset;
+    }
+  }
 
   p {
     color: #222;

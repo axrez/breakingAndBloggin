@@ -11,7 +11,7 @@ const Contact = () => (
   <Layout>
     <SEO
       meta="Want to talk? Reach out to me and let's chat about it!"
-      title="Emil Østergaard"
+      title="Contact"
     />
     <ContactWrapper>
       <Heading hero="true">Get in touch</Heading>

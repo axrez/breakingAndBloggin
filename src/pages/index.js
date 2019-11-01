@@ -11,7 +11,7 @@ const Index = () => (
     <>
       <SEO
         meta="Hi, I’m a frontend dev based out of Zealand, Denmark. I love technologies such as JavaScript, React, Gatsby, next.js and node.js"
-        title="Emil Østergaard"
+        title="Home"
       />
       <Hero />
       <About />

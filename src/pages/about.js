@@ -13,7 +13,7 @@ const About = () => (
   <Layout>
     <SEO
       meta="Want to learn more about me? This is the place to do it."
-      title="Emil Østergaard"
+      title="About"
     />
     <Hero />
     <Content about="true">

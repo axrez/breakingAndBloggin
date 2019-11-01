@@ -2,19 +2,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import ImageContainer from '../components/image'
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
+import ImageContainer from '../components/image'
 import { BlogContent, Heading } from '../components/style'
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <>
-        <ImageContainer fluid={data.featuredImage.childImageSharp.fluid} />
-        <Heading inline="true">{post.frontmatter.title}</Heading>
-        <BlogContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      </>
+      <SEO
+        meta={`This is a blog post about ${post.frontmatter.title}`}
+        title={post.frontmatter.title}
+      />
+      <ImageContainer fluid={data.featuredImage.childImageSharp.fluid} />
+      <Heading inline="true">{post.frontmatter.title}</Heading>
+      <BlogContent dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }
