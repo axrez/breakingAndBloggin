@@ -36,7 +36,7 @@ const About = () => (
 
     <Content about="true">
       I’ve since explored node.js, mongoDB and a lot of front-end, like next.js
-      and Gatsby.
+      and Gatsby. Now I'm slowly falling in love with functional programming.
     </Content>
 
     <Content>
